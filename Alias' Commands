@@ -1,5 +1,5 @@
 config system alias
-edit "Info HA <- Notes"
+edit "Info HA -- Notes"
 set command "
 #Date Modified: 6/27/2019
 #Line 01 : Show Hardware Status
@@ -17,7 +17,7 @@ diagnose sys ha status
 diagnose sys ha checksum show
 "
 next
-edit "Debug HA <- Notes"
+edit "Debug HA -- Notes"
 set command "
 #Date Modified: 6/27/2019
 #Line 01 : Debug HA Sync
@@ -34,7 +34,7 @@ diagnose debug console timestamp enable
 diagnose debug enable
 "
 next
-edit "Info Web Filter <- Notes"
+edit "Info Web Filter -- Notes"
 set command "
 #Date Modified: 6/27/2019
 #Line 01 : Show FortiGuard Webfilter Licensing Information
@@ -49,7 +49,7 @@ diagnose debug rating
 diagnose test application urlfilter 3
 "
 next
-edit "Debug Webfilter <- Notes"
+edit "Debug Webfilter -- Notes"
 set command "
 #Date Modified: 6/27/2019
 #Line 01 : Debug live rating requests and responses from FortiGuard
