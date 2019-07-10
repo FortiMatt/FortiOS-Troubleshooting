@@ -6,7 +6,7 @@ Me too!
 
 Well, I decided to create alias commands for standard FortiOS configuration and debug information. Please note that this repo is not publically endorsed/supported by Fortinet. I am just a sales engineer trying to make my life easier.
 
-**FortiOS Alias Command:
+**FortiOS Alias Command:**
 
 config system alias
   edit {name}
