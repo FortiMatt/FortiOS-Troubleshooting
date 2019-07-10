@@ -28,5 +28,9 @@ For more information on the alias command [CLICK HERE](https://docs.fortinet.com
    - Info
 4. GUI
    - Debug
+   
+## Delete Alias'
+
+In the event, you would like to delete the alias' off of your FortiOS device I have included a Delete Alias command/page as well.
 
 **Please note that this repo is not publically endorsed/supported by Fortinet. I am just a sales engineer trying to make my life easier.**
