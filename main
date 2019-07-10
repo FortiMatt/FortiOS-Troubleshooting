@@ -1,0 +1,49 @@
+config system alias
+edit "TAC_HA"
+set command "
+#6/27/2019
+#SHOW HARDWARE STATUS
+get system performance status
+#SHOW GENERAL INFO & LICENSING INFO
+get system status
+#HA CLUSTER INFO
+get system ha status
+#DISPLAY HA STATUS
+diagnose sys ha status
+#COMPARE HA CHECKSUMS
+diagnose sys ha checksum show
+"
+next
+edit "DEBUG_HA"
+set command "
+#HA SYNC ISSUES
+diagnose debug application hasync -1
+#HA FORMATION ISSUES
+diagnose debug application hatalk -1
+#ENABLE TIMESTAP IN OUTPUT
+diagnose debug console timestamp enable
+#ENABLE THE DEBUG
+diagnose debug enable
+"
+next
+edit "STAT_WF"
+set command "
+#GET FORTIGUARD WEBFILTER LICENSING
+get system fortiguard | grep webfilter-
+#GET FORTIGUARD WEBFILTER STATUS
+diagnose debug rating
+#SEE WEBFILTER CACHE
+diagnose test application urlfilter 3
+"
+next
+edit "DEBUG_WF"
+set command "
+#CHECK LIVE RATING REQUESTS AND RESPONSES
+#NOTE: YOU CAN ADD (| GREP DOMAIN) AFTER -1 FOR A SPECIFIC URL/DOMAIN
+diagnose debug application urlfilter -1
+#ENABLE THE DEBUG
+diagnose debug enable
+"
+next
+end
+
