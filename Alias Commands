@@ -1,7 +1,7 @@
 config system alias
 edit "Info HA -- Notes"
 set command "
-show system alias | grep 'Info HA' -f 
+show system alias | grep 'Info HA' -A 6
 #Line 01 : Show Hardware Status
 #Line 02 : Show General Info & Licensing Information
 #Line 03 : HA Cluster Information
@@ -20,7 +20,7 @@ diagnose sys ha checksum show
 next
 edit "Debug HA -- Notes"
 set command "
-show system alias | grep 'Debug HA' -f
+show system alias | grep 'Debug HA' -A 5
 #Line 01 : Debug HA Sync
 #Line 02 : Debug HA Talk 
 #Line 03 : Enable Timestamp in output
@@ -37,7 +37,7 @@ diagnose debug enable
 next
 edit "Info Web Filter -- Notes"
 set command "
-show system alias | grep 'Info Web Filter' -f
+show system alias | grep 'Info Web Filter' -A 4
 #Line 01 : Show FortiGuard Webfilter Licensing Information
 #Line 02 : Show FortiGuard Webfilter Status
 #Line 03 : Show FortiGuard Webfilter Cache
@@ -52,7 +52,7 @@ diagnose test application urlfilter 3
 next
 edit "Debug Webfilter -- Notes"
 set command "
-show system alias | grep 'Debug Webfilter' -f
+show system alias | grep 'Debug Webfilter' -A 3
 #Line 01 : Debug rating requests and responses from FortiGuard
 #NOTE: Specify a URL (diagnose debug application urlfilter -1 | grep domain.com)
 #Line 02 : Enable the debug
@@ -66,7 +66,7 @@ diagnose debug enable
 next
 edit "Debug GUI -- Notes"
 set command "
-show system alias | grep 'Info GUI' -f
+show system alias | grep 'Info GUI' -A 3
 #Line 01 : Turns on CLI debug to see what commands are entered via GUI
 #Line 02 : Enable the debug
 "
@@ -79,7 +79,7 @@ diagnose debug enable
 next
 edit "Info OSPF -- Notes"
 set command "
-show system alias | grep 'Info OSPF' -f 
+show system alias | grep 'Info OSPF' -A 7
 #Line 01 : OSPF status
 #Line 02 : Info on OSPF interfaces
 #Line 03 : Info on OSPF neighbors
@@ -100,7 +100,7 @@ get router info ospf database self-originate
 next
 edit "Debug OSPF -- Notes"
 set command "
-show system alias | grep 'Debug OSPF' -f 
+show system alias | grep 'Debug OSPF' -A 4
 #Line 01 : Debugs all OSPF packets
 #Line 02 : Debug severity level to log <critical | error | warn | info | none>
 #Line 03 : Enable the Debug
