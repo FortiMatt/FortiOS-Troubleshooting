@@ -1,49 +1,66 @@
 config system alias
-edit "TAC_HA"
+edit "Info HA Notes"
 set command "
-#6/27/2019
-#SHOW HARDWARE STATUS
+#Date Modified: 6/27/2019
+#Line 01 : Show Hardware Status
+#Line 02 : Show General Info & Licensing Information
+#Line 03 : HA Cluster Information
+#Line 04 : Display HA Status
+#Line 05 : Compare HA Checksums
+"
+edit "Info HA"
+set command "
 get system performance status
-#SHOW GENERAL INFO & LICENSING INFO
 get system status
-#HA CLUSTER INFO
 get system ha status
-#DISPLAY HA STATUS
 diagnose sys ha status
-#COMPARE HA CHECKSUMS
 diagnose sys ha checksum show
 "
 next
-edit "DEBUG_HA"
+edit "Debug HA Notes"
 set command "
-#HA SYNC ISSUES
+#Date Modified: 6/27/2019
+#Line 01 : Debug HA Sync
+#Line 02 : Debug HA Talk 
+#Line 03 : Enable Timestamp in output
+#Line 04 : Enable Debug for 30 minutes
+"
+next
+edit "Debug HA"
+set command "
 diagnose debug application hasync -1
-#HA FORMATION ISSUES
 diagnose debug application hatalk -1
-#ENABLE TIMESTAP IN OUTPUT
 diagnose debug console timestamp enable
-#ENABLE THE DEBUG
 diagnose debug enable
 "
 next
-edit "STAT_WF"
+edit "Info Web Filter Notes"
 set command "
-#GET FORTIGUARD WEBFILTER LICENSING
+#Date Modified: 6/27/2019
+#Line 01 : Show FortiGuard Webfilter Licensing Information
+#Line 02 : Show FortiGuard Webfilter Status
+#Line 03 : Show FortiGuard Webfilter Cache
+"
+next
+edit "Info Web Filter"
+set command "
 get system fortiguard | grep webfilter-
-#GET FORTIGUARD WEBFILTER STATUS
 diagnose debug rating
-#SEE WEBFILTER CACHE
 diagnose test application urlfilter 3
 "
 next
-edit "DEBUG_WF"
+edit "Debug Webfilter Notes"
 set command "
-#CHECK LIVE RATING REQUESTS AND RESPONSES
-#NOTE: YOU CAN ADD (| GREP DOMAIN) AFTER -1 FOR A SPECIFIC URL/DOMAIN
+#Date Modified: 6/27/2019
+#Line 01 : Debug live rating requests and responses from FortiGuard
+#NOTE: You may specify a URL via | GREP DOMAIN (diagnose debug application urlfilter -1 | grep domain.com)
+#Line 02 : ENABLE THE DEBUG
+"
+next
+edit "Debug Webfilter"
+set command "
 diagnose debug application urlfilter -1
-#ENABLE THE DEBUG
 diagnose debug enable
 "
 next
 end
-
