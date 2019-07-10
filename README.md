@@ -1,8 +1,6 @@
 # Troubleshooting
 
-Ever get tired of running the same old debug/troubleshooting commands?
-
-Me too!
+Ever get tired of running the same old debug/troubleshooting commands? **Me too!**
 
 Well, I decided to create **alias** commands for standard FortiOS configuration and debug information. 
 
