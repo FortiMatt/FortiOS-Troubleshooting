@@ -98,6 +98,21 @@ get router info ospf database router lsa
 get router info ospf database self-originate
 "
 next
+edit "Debug OSPF -- Notes"
+set command "
+show system alias | grep 'Debug OSPF' -f 
+#Line 01 : Debugs all OSPF packets
+#Line 02 : Debug severity level to log <critical | error | warn | info | none>
+#Line 03 : Enable the Debug
+"
+next
+edit "Debug OSPF"
+set command "
+diagnose ip router ospf all enable
+diagnose ip router ospf level info
+diagnose debug enable
+"
+next
 edit "A Helpful Troubleshooting Repo"
 set command "
 show full-configuration system alias \'A Helpful Troubleshooting Repo\'
