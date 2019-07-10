@@ -1,6 +1,6 @@
 config system alias
-    edit "Info HA -- Notes"
-        set command "
+edit "Info HA -- Notes"
+set command "
 show system alias | grep 'Info HA' -f 
 #Line 01 : Show Hardware Status
 #Line 02 : Show General Info & Licensing Information
@@ -8,80 +8,80 @@ show system alias | grep 'Info HA' -f
 #Line 04 : Display HA Status
 #Line 05 : Compare HA Checksums
 "
-    next
-    edit "Info HA"
-        set command "
+next
+edit "Info HA"
+set command "
 get system performance status
 get system status
 get system ha status
 diagnose sys ha status
 diagnose sys ha checksum show
 "
-    next
-    edit "Debug HA -- Notes"
-        set command "
+next
+edit "Debug HA -- Notes"
+set command "
 show system alias | grep 'Debug HA' -f
 #Line 01 : Debug HA Sync
 #Line 02 : Debug HA Talk 
 #Line 03 : Enable Timestamp in output
 #Line 04 : Enable Debug for 30 minutes
 "
-    next
-    edit "Debug HA"
-        set command "
+next
+edit "Debug HA"
+set command "
 diagnose debug application hasync -1
 diagnose debug application hatalk -1
 diagnose debug console timestamp enable
 diagnose debug enable
 "
-    next
-    edit "Info Web Filter -- Notes"
-        set command "
+next
+edit "Info Web Filter -- Notes"
+set command "
 show system alias | grep 'Info Web Filter' -f
 #Line 01 : Show FortiGuard Webfilter Licensing Information
 #Line 02 : Show FortiGuard Webfilter Status
 #Line 03 : Show FortiGuard Webfilter Cache
 "
-    next
-    edit "Info Web Filter"
-        set command "
+next
+edit "Info Web Filter"
+set command "
 get system fortiguard | grep webfilter-
 diagnose debug rating
 diagnose test application urlfilter 3
 "
-    next
-    edit "Debug Webfilter -- Notes"
-        set command "
+next
+edit "Debug Webfilter -- Notes"
+set command "
 show system alias | grep 'Debug Webfilter' -f
 #Line 01 : Debug rating requests and responses from FortiGuard
 #NOTE: Specify a URL (diagnose debug application urlfilter -1 | grep domain.com)
 #Line 02 : Enable the debug
 "
-    next
-    edit "Debug Webfilter"
-        set command "
+next
+edit "Debug Webfilter"
+set command "
 diagnose debug application urlfilter -1
 diagnose debug enable
 "
-    next
-    edit "Info GUI -- Notes"
-        set command "
+next
+edit "Info GUI -- Notes"
+set command "
 show system alias | grep 'Info GUI' -f
 #Line 01 : Turns on CLI debug to see what commands are entered via GUI
 #Line 02 : Enable the debug
 "
-    next
-    edit "Info GUI"
-        set command "
+next
+edit "Info GUI"
+set command "
 diagnose debug cli 5
 diagnose debug enable
 "
-    next
-    edit "A Helpful Troubleshooting Repo"
-        set command "
+next
+edit "A Helpful Troubleshooting Repo"
+set command "
 show full-configuration system alias \'A Helpful Troubleshooting Repo\'
 #For more Info Check out
 #https://github.com/FortiMatt/Troubleshooting
 "
-    next
+next
 end
