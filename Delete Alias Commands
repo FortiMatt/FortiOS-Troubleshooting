@@ -22,7 +22,6 @@ next
 edit "Delete Info Alias -- Notes"
 set command "
 config system alias
-delete 'A Helpful Troubleshooting Repo' 
 delete 'Info HA -- Notes'   
 delete 'Info Web Filter -- Notes'
 delete 'Info OSPF -- Notes'
