@@ -2,7 +2,7 @@ config system alias
 edit "Delete Alias -- Notes"
 set command "
 config system alias
-delete "A Helpful Troubleshooting Repo"
+delete A\ Helpful\ Troubleshooting\ Repo
 delete 'Debug HA -- Notes'   
 delete 'Debug Webfilter -- Notes'   
 delete 'Info HA -- Notes'   
