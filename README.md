@@ -17,19 +17,21 @@ For more information on the alias command [CLICK HERE](https://docs.fortinet.com
 
 ## Current Alias'
 
-1. High Availablity
-   - Debug
-   - Info
-2. OSPF
-   - Debug
-   - Info
-3. Web Filtering
-   - Debug
-   - Info
-4. GUI
-   - Debug
+- High Availablity
+  - Debug
+  - Info
+- OSPF
+  - Debug
+  - Info
+- Web Filtering
+  - Debug
+  - Info
+- GUI
+  - Debug
    
 ## Delete Alias'
+
+- Delete Debug Alias
 
 In the event, you would like to delete the alias' off of your FortiOS device I have included a Delete Alias command/page as well.
 
