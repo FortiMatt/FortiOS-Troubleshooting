@@ -31,7 +31,10 @@ For more information on the alias command [CLICK HERE](https://docs.fortinet.com
    
 ## Delete Alias'
 
+- Delete Debug Alias -- Notes
 - Delete Debug Alias
+- Delete Info Alias -- Notes
+- Delete Info Alias
 
 In the event, you would like to delete the alias' off of your FortiOS device I have included a Delete Alias command/page as well.
 
