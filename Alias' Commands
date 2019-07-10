@@ -1,7 +1,7 @@
 config system alias
 edit "Info HA -- Notes"
 set command "
-#Date Modified: 6/27/2019
+show full-configuration system alias 'Info HA -- Notes' 
 #Line 01 : Show Hardware Status
 #Line 02 : Show General Info & Licensing Information
 #Line 03 : HA Cluster Information
@@ -20,7 +20,7 @@ diagnose sys ha checksum show
 next
 edit "Debug HA -- Notes"
 set command "
-#Date Modified: 6/27/2019
+show full-configuration system alias 'Debug HA -- Notes'
 #Line 01 : Debug HA Sync
 #Line 02 : Debug HA Talk 
 #Line 03 : Enable Timestamp in output
@@ -37,7 +37,7 @@ diagnose debug enable
 next
 edit "Info Web Filter -- Notes"
 set command "
-#Date Modified: 6/27/2019
+show full-configuration system alias 'Info Web Filter -- Notes'
 #Line 01 : Show FortiGuard Webfilter Licensing Information
 #Line 02 : Show FortiGuard Webfilter Status
 #Line 03 : Show FortiGuard Webfilter Cache
@@ -52,9 +52,9 @@ diagnose test application urlfilter 3
 next
 edit "Debug Webfilter -- Notes"
 set command "
-#Date Modified: 6/27/2019
-#Line 01 : Debug live rating requests and responses from FortiGuard
-#NOTE: You may specify a URL via | GREP DOMAIN (diagnose debug application urlfilter -1 | grep domain.com)
+show full-configuration system alias 'Debug Webfilter -- Notes'
+#Line 01 : Debug rating requests and responses from FortiGuard
+#NOTE: Specify a URL (diagnose debug application urlfilter -1 | grep domain.com)
 #Line 02 : ENABLE THE DEBUG
 "
 next
