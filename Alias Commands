@@ -77,6 +77,27 @@ diagnose debug cli 5
 diagnose debug enable
 "
 next
+edit "Info OSPF -- Notes"
+set command "
+show system alias | grep 'Info OSPF' -f 
+#OSPF status
+#Information on OSPF interfaces
+#Information on OSPF neighbors
+#Summary of all LSDB entries
+#Details of all LSDB entries
+#Information on LSAs originating from Fortigate
+"
+next
+edit "Info OSPF"
+set command "
+get router info ospf status
+get router info ospf interface
+get router info ospf neighbor
+get router info ospf database brief
+get router info ospf database router lsa
+get router info ospf database self-originate
+"
+next
 edit "A Helpful Troubleshooting Repo"
 set command "
 show full-configuration system alias \'A Helpful Troubleshooting Repo\'
