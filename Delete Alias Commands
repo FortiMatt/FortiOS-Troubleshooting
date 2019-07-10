@@ -1,0 +1,23 @@
+edit "Delete Alias -- Notes"
+set command "
+config system alias
+delete "A Helpful Troubleshooting Repo"
+delete 'Debug HA -- Notes'   
+delete 'Debug Webfilter -- Notes'   
+delete 'Info HA -- Notes'   
+delete 'Info Web Filter -- Notes'
+delete 'Info GUI -- Notes'
+end
+"
+next
+edit "Delete Alias"
+set command "
+config system alias
+delete 'Debug HA'
+delete 'Debug Webfilter'
+delete 'Info HA' 
+delete 'Info Web Filter'
+delete 'Info GUI'
+end
+"
+end
