@@ -55,12 +55,25 @@ set command "
 show full-configuration system alias 'Debug Webfilter -- Notes'
 #Line 01 : Debug rating requests and responses from FortiGuard
 #NOTE: Specify a URL (diagnose debug application urlfilter -1 | grep domain.com)
-#Line 02 : ENABLE THE DEBUG
+#Line 02 : Enable the debug
 "
 next
 edit "Debug Webfilter"
 set command "
 diagnose debug application urlfilter -1
+diagnose debug enable
+"
+next
+edit "Info GUI -- Notes"
+set command "
+show full-configuration system alias 'Info GUI -- Notes'
+#Line 01 : Turns on CLI debug to see what commands are entered via GUI
+#Line 02 : Enable the debug
+"
+next
+edit "Info GUI"
+set command "
+diagnose debug cli 5
 diagnose debug enable
 "
 next
