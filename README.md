@@ -17,6 +17,4 @@ end
 ```
 For more information on the alias command [CLICK HERE](https://docs.fortinet.com/document/fortigate/6.0.5/cli-reference/991461/system-alias)
 
-<aside class="warning">
 Please note that this repo is not publically endorsed/supported by Fortinet. I am just a sales engineer trying to make my life easier.
-</aside>
