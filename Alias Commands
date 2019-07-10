@@ -64,14 +64,14 @@ diagnose debug application urlfilter -1
 diagnose debug enable
 "
 next
-edit "Info GUI -- Notes"
+edit "Debug GUI -- Notes"
 set command "
 show system alias | grep 'Info GUI' -f
 #Line 01 : Turns on CLI debug to see what commands are entered via GUI
 #Line 02 : Enable the debug
 "
 next
-edit "Info GUI"
+edit "Debug GUI"
 set command "
 diagnose debug cli 5
 diagnose debug enable
