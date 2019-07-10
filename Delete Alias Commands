@@ -1,28 +1,40 @@
 config system alias
-edit "Delete Alias -- Notes"
+edit "Delete Debug Alias -- Notes"
 set command "
 config system alias
-delete 'A Helpful Troubleshooting Repo'
 delete 'Debug HA -- Notes'   
 delete 'Debug Webfilter -- Notes'   
-delete 'Info HA -- Notes'   
-delete 'Info Web Filter -- Notes'
 delete 'Debug GUI -- Notes'
-delete 'Info OSPF -- Notes'
 delete 'Debug OSPF -- Notes'
 end
 "
 next
-edit "Delete Alias"
+edit "Delete Debug Alias"
 set command "
 config system alias
 delete 'Debug HA'
 delete 'Debug Webfilter'
+delete 'Debug GUI'
+delete 'Debug OSPF'
+end
+"
+next
+edit "Delete Info Alias -- Notes"
+set command "
+config system alias
+delete 'A Helpful Troubleshooting Repo' 
+delete 'Info HA -- Notes'   
+delete 'Info Web Filter -- Notes'
+delete 'Info OSPF -- Notes'
+end
+"
+next
+edit "Delete Info Alias"
+set command "
+config system alias
 delete 'Info HA' 
 delete 'Info Web Filter'
-delete 'Debug GUI'
 delete 'Info OSPF'
-delete 'Debug OSPF'
 end
 "
 end
