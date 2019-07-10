@@ -13,6 +13,7 @@ config system alias
   next
 end
 ```
+For more information on the alias command [CLICK HERE](https://docs.fortinet.com/document/fortigate/6.0.5/cli-reference/991461/system-alias)
 
 ## Current Alias'
 
@@ -27,7 +28,5 @@ end
    - Info
 4. GUI
    - Debug
-
-For more information on the alias command [CLICK HERE](https://docs.fortinet.com/document/fortigate/6.0.5/cli-reference/991461/system-alias)
 
 **Please note that this repo is not publically endorsed/supported by Fortinet. I am just a sales engineer trying to make my life easier.**
