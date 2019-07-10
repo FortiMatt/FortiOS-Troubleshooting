@@ -8,6 +8,7 @@ set command "
 #Line 04 : Display HA Status
 #Line 05 : Compare HA Checksums
 "
+next
 edit "Info HA"
 set command "
 get system performance status
