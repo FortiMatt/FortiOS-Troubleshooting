@@ -8,6 +8,7 @@ delete 'Debug Webfilter -- Notes'
 delete 'Info HA -- Notes'   
 delete 'Info Web Filter -- Notes'
 delete 'Info GUI -- Notes'
+delete 'Info OSFP -- Notes'
 end
 "
 next
@@ -19,6 +20,7 @@ delete 'Debug Webfilter'
 delete 'Info HA' 
 delete 'Info Web Filter'
 delete 'Info GUI'
+delete 'Info OSPF'
 end
 "
 end
