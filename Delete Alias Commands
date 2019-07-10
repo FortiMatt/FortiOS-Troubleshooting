@@ -8,7 +8,7 @@ delete 'Debug Webfilter -- Notes'
 delete 'Info HA -- Notes'   
 delete 'Info Web Filter -- Notes'
 delete 'Info GUI -- Notes'
-delete 'Info OSFP -- Notes'
+delete 'Info OSPF -- Notes'
 end
 "
 next
