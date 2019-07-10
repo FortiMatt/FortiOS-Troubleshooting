@@ -1,3 +1,4 @@
+config system alias
 edit "Delete Alias -- Notes"
 set command "
 config system alias
