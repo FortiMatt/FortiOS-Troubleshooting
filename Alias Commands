@@ -80,12 +80,12 @@ next
 edit "Info OSPF -- Notes"
 set command "
 show system alias | grep 'Info OSPF' -f 
-#OSPF status
-#Information on OSPF interfaces
-#Information on OSPF neighbors
-#Summary of all LSDB entries
-#Details of all LSDB entries
-#Information on LSAs originating from Fortigate
+#Line 01 : OSPF status
+#Line 02 : Info on OSPF interfaces
+#Line 03 : Info on OSPF neighbors
+#Line 04 : Summary of all LSDB
+#Line 05 : Details of all LSDB
+#Line 06 : Info on LSAs originating from FG
 "
 next
 edit "Info OSPF"
