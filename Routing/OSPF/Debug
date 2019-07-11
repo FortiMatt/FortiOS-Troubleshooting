@@ -1,5 +1,5 @@
 config system alias
-edit "Debug OSPF -- Notes"
+edit "Debug OSPF -- Help"
 set command "
 show system alias | grep 'Debug OSPF' -A 4
 #Line 01 : Debugs all OSPF packets
