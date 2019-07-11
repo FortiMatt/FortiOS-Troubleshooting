@@ -1,5 +1,5 @@
 config system alias
-edit "Debug FortiAnalyzer -- Notes"
+edit "Debug FortiAnalyzer -- Help"
 set command "
 show system alias | grep 'Debug FortiAnalyzer' -A 3
 #Line 01 : Test connection to FAZ
