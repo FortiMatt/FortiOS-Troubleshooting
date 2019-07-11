@@ -6,6 +6,7 @@ delete 'Debug HA -- Notes'
 delete 'Debug Webfilter -- Notes'   
 delete 'Debug GUI -- Notes'
 delete 'Debug OSPF -- Notes'
+delete 'Debug FortiAnalyzer -- Notes'
 end
 "
 next
@@ -16,6 +17,7 @@ delete 'Debug HA'
 delete 'Debug Webfilter'
 delete 'Debug GUI'
 delete 'Debug OSPF'
+delete 'Debug FortiAnalyzer' 
 end
 "
 next
@@ -25,6 +27,7 @@ config system alias
 delete 'Info HA -- Notes'   
 delete 'Info Web Filter -- Notes'
 delete 'Info OSPF -- Notes'
+delete 'Info FortiAnalyzer -- Notes'
 end
 "
 next
@@ -34,6 +37,21 @@ config system alias
 delete 'Info HA' 
 delete 'Info Web Filter'
 delete 'Info OSPF'
+delete 'Info FortiAnalyzer'
+end
+"
+next
+edit "Delete TAC Alias -- Notes"
+set command "
+config system alias
+delete 'TAC FortiAnalyzer -- Notes'   
+end
+"
+next
+edit "Delete TAC Alias"
+set command "
+config system alias
+delete 'TAC FortiAnalyzer' 
 end
 "
 end
