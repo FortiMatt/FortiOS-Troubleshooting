@@ -1,5 +1,5 @@
 config system alias
-edit "Info FortiAnalyzer -- Notes"
+edit "Info FortiAnalyzer -- Help"
 set command "
 show system alias | grep 'Info FortiAnalyzer' -A 5
 #Line 01 : Show FAZ Log settings
