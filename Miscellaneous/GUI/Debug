@@ -1,5 +1,5 @@
 config system alias
-edit "Debug GUI -- Notes"
+edit "Debug GUI -- Help"
 set command "
 show system alias | grep 'Info GUI' -A 3
 #Line 01 : Turns on CLI debug to see what commands are entered via GUI
