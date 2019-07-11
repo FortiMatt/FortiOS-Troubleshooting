@@ -1,1 +1,18 @@
-Test
+config system alend
+edit "Debug HA -- Notes"
+set command "
+show system alias | grep 'Debug HA' -A 5
+#Line 01 : Debug HA Sync
+#Line 02 : Debug HA Talk 
+#Line 03 : Enable Timestamp in output
+#Line 04 : Enable Debug for 30 minutes
+"
+next
+edit "Debug HA"
+set command "
+diagnose debug application hasync -1
+diagnose debug application hatalk -1
+diagnose debug console timestamp enable
+diagnose debug enable
+"
+end
