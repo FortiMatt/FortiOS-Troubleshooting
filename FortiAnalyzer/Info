@@ -1,1 +1,18 @@
-FAZ Info
+config system alias
+edit "Info FortiAnalyzer -- Notes"
+set command "
+show system alias | grep 'Info FortiAnalyzer' -A 5
+#Line 01 : Show FAZ Log settings
+#Line 02 : Show what events are sent to FAZ
+#Line 03 : Verify FG Log Settings
+#Line 04 : Verfiy FG Event Settings
+"
+next
+edit "Info FortiAnalyzer"
+set command "
+get log fortianalyzer setting
+get log fortianalyzer filter
+get log setting
+get log eventfilter
+"
+end
