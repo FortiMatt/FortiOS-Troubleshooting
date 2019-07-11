@@ -54,4 +54,14 @@ config system alias
 delete 'TAC FortiAnalyzer' 
 end
 "
+next
+edit "DELETE ALL"
+set command "
+alias 'Delete Debug Alias -- Notes'
+alias 'Delete Debug Alias'
+alias 'Delete Info Alias -- Notes'
+alias 'Delete Info Alias'
+alias 'Delete TAC Alias -- Notes'
+alias 'Delete TAC Alias'
+"
 end
