@@ -1,5 +1,5 @@
-config system alend
-edit "Debug HA -- Notes"
+config system alias
+edit "Debug HA -- Help"
 set command "
 show system alias | grep 'Debug HA' -A 5
 #Line 01 : Debug HA Sync
