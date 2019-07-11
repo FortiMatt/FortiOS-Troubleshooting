@@ -1,0 +1,54 @@
+config system alias
+edit "Info FortiAnalyzer -- Notes"
+set command "
+show system alias | grep 'Info FortiAnalyzer' -A 5
+#Line 01 : Show FAZ Log settings
+#Line 02 : Show what events are sent to FAZ
+#Line 03 : Verify FG Log Settings
+#Line 04 : Verfiy FG Event Settings
+"
+next
+edit "Info FortiAnalyzer"
+set command "
+get log fortianalyzer setting
+get log fortianalyzer filter
+get log setting
+get log eventfilter
+"
+next
+edit "Debug FortiAnalyzer -- Notes"
+set command "
+show system alias | grep 'Debug FortiAnalyzer' -A 3
+#Line 01 : Test connection to FAZ
+#Line 02 : Check FAZ Log Queue
+"
+next
+edit "Debug FortiAnalyzer"
+set command "
+exec log fortianalyzer test-connectivity
+diagnose test app miglogd 6
+"
+next
+edit "TAC FortiAnalyzer -- Notes"
+set command "
+show system alias | grep 'TAC FortiAna' -A 8
+#Line 01 : Show System Settings
+#Line 02 : Show System Perf
+#Line 03 : Show Log Status
+#Line 04 : Show Crash Log
+#Line 05 : Call Alias
+#Line 06 : Call Alias
+#Line 07 : Enable Debug
+"
+next
+edit "TAC FortiAnalyzer"
+set command "
+get sys status
+get sys performance status
+diagnose log kernel-stats
+diagnose debug crashlog read
+alias 'Info FortiAnalyzer'
+alias 'Debug FortiAnalyzer'
+diagnose debug enable
+"
+end
