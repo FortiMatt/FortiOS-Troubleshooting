@@ -13,6 +13,9 @@ config system alias
   next
 end
 ```
+
+One of the key things to point out when creating an alias is the command character limit of 255. To get around this limitation, you can "nest" alias inside each other. Thus allowing you to create endless possibilities/command strings.
+
 For more information on the alias command [CLICK HERE](https://docs.fortinet.com/document/fortigate/6.0.5/cli-reference/991461/system-alias)
 
 ## Navigation/Structure:
