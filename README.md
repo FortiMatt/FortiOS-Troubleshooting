@@ -1,4 +1,4 @@
-# Troubleshooting
+# FortiOS Troubleshooting
 
 Ever get tired of running the same old debug/troubleshooting commands? **Me too!**
 
