@@ -19,9 +19,9 @@ For more information on the alias command [CLICK HERE](https://docs.fortinet.com
 
 This repo is laid out via specific FortiOS troubleshooting topics. Within each topic/section, there is info, debug and in some cases TAC commands.
 
-- info = What does FortiOS think about the topic and/or how is FortiOS configured
-- debug = View real-time debug within FortiOS on a specific topic
-- TAC = A summary of info/debug commands helpful for when creating a support ticket
+- **info** = What does FortiOS think about the topic and/or how is FortiOS configured
+- **debug** = View real-time debug within FortiOS on a specific topic
+- **TAC** = A summary of info/debug commands helpful for when creating a support ticket
 
 Each file also contains a "Help Alias" to support/guide you as an engineer as to what each line/command does.
 
