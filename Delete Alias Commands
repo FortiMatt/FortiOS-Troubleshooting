@@ -1,12 +1,12 @@
 config system alias
-edit "Delete Debug Alias -- Notes"
+edit "Delete Debug Alias -- Help"
 set command "
 config system alias
-delete 'Debug HA -- Notes'   
-delete 'Debug Webfilter -- Notes'   
-delete 'Debug GUI -- Notes'
-delete 'Debug OSPF -- Notes'
-delete 'Debug FortiAnalyzer -- Notes'
+delete 'Debug HA -- Help'   
+delete 'Debug Webfilter -- Help'   
+delete 'Debug GUI -- Help'
+delete 'Debug OSPF -- Help'
+delete 'Debug FortiAnalyzer -- Help'
 end
 "
 next
@@ -21,13 +21,13 @@ delete 'Debug FortiAnalyzer'
 end
 "
 next
-edit "Delete Info Alias -- Notes"
+edit "Delete Info Alias -- Help"
 set command "
 config system alias
-delete 'Info HA -- Notes'   
-delete 'Info Web Filter -- Notes'
-delete 'Info OSPF -- Notes'
-delete 'Info FortiAnalyzer -- Notes'
+delete 'Info HA -- Help'   
+delete 'Info Web Filter -- Help'
+delete 'Info OSPF -- Help'
+delete 'Info FortiAnalyzer -- Help'
 end
 "
 next
@@ -41,10 +41,10 @@ delete 'Info FortiAnalyzer'
 end
 "
 next
-edit "Delete TAC Alias -- Notes"
+edit "Delete TAC Alias -- Help"
 set command "
 config system alias
-delete 'TAC FortiAnalyzer -- Notes'   
+delete 'TAC FortiAnalyzer -- Help'   
 end
 "
 next
@@ -57,11 +57,11 @@ end
 next
 edit "DELETE ALL"
 set command "
-alias 'Delete Debug Alias -- Notes'
+alias 'Delete Debug Alias -- Help'
 alias 'Delete Debug Alias'
-alias 'Delete Info Alias -- Notes'
+alias 'Delete Info Alias -- Help'
 alias 'Delete Info Alias'
-alias 'Delete TAC Alias -- Notes'
+alias 'Delete TAC Alias -- Help'
 alias 'Delete TAC Alias'
 "
 end
