@@ -1,5 +1,5 @@
 config system alias
-edit "Info HA -- Notes"
+edit "Info HA -- Help"
 set command "
 show system alias | grep 'Info HA' -A 6
 #Line 01 : Show Hardware Status
