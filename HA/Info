@@ -1,1 +1,20 @@
-HA INFO
+config system alias
+edit "Info HA -- Notes"
+set command "
+show system alias | grep 'Info HA' -A 6
+#Line 01 : Show Hardware Status
+#Line 02 : Show General Info & Licensing Information
+#Line 03 : HA Cluster Information
+#Line 04 : Display HA Status
+#Line 05 : Compare HA Checksums
+"
+next
+edit "Info HA"
+set command "
+get system performance status
+get system status
+get system ha status
+diagnose sys ha status
+diagnose sys ha checksum show
+"
+end
