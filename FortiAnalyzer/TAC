@@ -1,5 +1,5 @@
 config system alias
-edit "Info FortiAnalyzer -- Notes"
+edit "Info FortiAnalyzer -- Help"
 set command "
 show system alias | grep 'Info FortiAnalyzer' -A 5
 #Line 01 : Show FAZ Log settings
@@ -16,7 +16,7 @@ get log setting
 get log eventfilter
 "
 next
-edit "Debug FortiAnalyzer -- Notes"
+edit "Debug FortiAnalyzer -- Help"
 set command "
 show system alias | grep 'Debug FortiAnalyzer' -A 3
 #Line 01 : Test connection to FAZ
@@ -29,7 +29,7 @@ exec log fortianalyzer test-connectivity
 diagnose test app miglogd 6
 "
 next
-edit "TAC FortiAnalyzer -- Notes"
+edit "TAC FortiAnalyzer -- Help"
 set command "
 show system alias | grep 'TAC FortiAna' -A 8
 #Line 01 : Show System Settings
