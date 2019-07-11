@@ -1,5 +1,5 @@
 config system alias
-edit "Info OSPF -- Notes"
+edit "Info OSPF -- Help"
 set command "
 show system alias | grep 'Info OSPF' -A 7
 #Line 01 : OSPF status
