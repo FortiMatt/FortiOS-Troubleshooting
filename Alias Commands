@@ -1,5 +1,5 @@
 config system alias
-edit "Info HA -- Notes"
+edit "Info HA -- Help"
 set command "
 show system alias | grep 'Info HA' -A 6
 #Line 01 : Show Hardware Status
@@ -18,7 +18,7 @@ diagnose sys ha status
 diagnose sys ha checksum show
 "
 next
-edit "Debug HA -- Notes"
+edit "Debug HA -- Help"
 set command "
 show system alias | grep 'Debug HA' -A 5
 #Line 01 : Debug HA Sync
@@ -35,7 +35,7 @@ diagnose debug console timestamp enable
 diagnose debug enable
 "
 next
-edit "Info Web Filter -- Notes"
+edit "Info Web Filter -- Help"
 set command "
 show system alias | grep 'Info Web Filter' -A 4
 #Line 01 : Show FortiGuard Webfilter Licensing Information
@@ -50,7 +50,7 @@ diagnose debug rating
 diagnose test application urlfilter 3
 "
 next
-edit "Debug Webfilter -- Notes"
+edit "Debug Webfilter -- Help"
 set command "
 show system alias | grep 'Debug Webfilter' -A 3
 #Line 01 : Debug rating requests and responses from FortiGuard
@@ -64,7 +64,7 @@ diagnose debug application urlfilter -1
 diagnose debug enable
 "
 next
-edit "Debug GUI -- Notes"
+edit "Debug GUI -- Help"
 set command "
 show system alias | grep 'Info GUI' -A 3
 #Line 01 : Turns on CLI debug to see what commands are entered via GUI
@@ -77,7 +77,7 @@ diagnose debug cli 5
 diagnose debug enable
 "
 next
-edit "Info OSPF -- Notes"
+edit "Info OSPF -- Help"
 set command "
 show system alias | grep 'Info OSPF' -A 7
 #Line 01 : OSPF status
@@ -98,7 +98,7 @@ get router info ospf database router lsa
 get router info ospf database self-originate
 "
 next
-edit "Debug OSPF -- Notes"
+edit "Debug OSPF -- Help"
 set command "
 show system alias | grep 'Debug OSPF' -A 4
 #Line 01 : Debugs all OSPF packets
@@ -113,7 +113,7 @@ diagnose ip router ospf level info
 diagnose debug enable
 "
 next
-edit "Info FortiAnalyzer -- Notes"
+edit "Info FortiAnalyzer -- Help"
 set command "
 show system alias | grep 'Info FortiAnalyzer' -A 5
 #Line 01 : Show FAZ Log settings
@@ -130,7 +130,7 @@ get log setting
 get log eventfilter
 "
 next
-edit "Debug FortiAnalyzer -- Notes"
+edit "Debug FortiAnalyzer -- Help"
 set command "
 show system alias | grep 'Debug FortiAnalyzer' -A 3
 #Line 01 : Test connection to FAZ
@@ -143,7 +143,7 @@ exec log fortianalyzer test-connectivity
 diagnose test app miglogd 6
 "
 next
-edit "TAC FortiAnalyzer -- Notes"
+edit "TAC FortiAnalyzer -- Help"
 set command "
 show system alias | grep 'TAC FortiAna' -A 8
 #Line 01 : Show System Settings
