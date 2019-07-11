@@ -25,4 +25,6 @@ This repo is laid out via specific FortiOS troubleshooting topics. Within each t
 
 Each file also contains a "Help Alias" to support/guide you as an engineer as to what each line/command does.
 
-**Please note that this repo is not publically endorsed/supported by Fortinet. I am just a sales engineer trying to make my life easier.**
+## Notice
+
+Please note that this repo is not publically endorsed/supported by Fortinet. I am just a sales engineer trying to make my life easier.
