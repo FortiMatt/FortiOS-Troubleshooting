@@ -6,7 +6,6 @@ show system alias | grep 'Info DHCP' -A 3
 #Line 02 : Show DHCP List. Default = All or define via <interface>
 "
 next
-config system alias
 edit "Info DHCP"
 set command "
 show system dhcp server
