@@ -1,6 +1,7 @@
 config system alias
 edit "Info DHCP -- Help"
 set command "
+show system alias | grep 'Info DHCP' -A 3
 #Line 01 : Show configured DHCP Servers in FortiOS
 #Line 02 : Show DHCP List. Default = All or define via <interface>
 "
