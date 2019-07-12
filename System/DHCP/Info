@@ -1,0 +1,7 @@
+config system alias
+edit "Info DHCP"
+set command "
+show system dhcp server
+execute dhcp lease-list 
+"
+end
