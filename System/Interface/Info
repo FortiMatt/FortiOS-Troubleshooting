@@ -1,0 +1,10 @@
+config system alias
+edit "System Interface Wan"
+set command "
+get hardware nic wan1 | grep Speed
+get hardware nic wan1 | grep Duplex
+get hardware nic wan2 | grep Speed
+get hardware nic wan2 | grep Duplex
+get system interface physical | grep "status: up" -B4 -A1
+"
+end
