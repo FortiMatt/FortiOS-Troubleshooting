@@ -5,3 +5,9 @@ get system interface physical | grep "status: up" -B4 -A1
 show system interface | grep "set ip 0.0.0.0"
 "
 end
+config system alias
+edit "Info Interface Vlan"
+set command "
+show system interface | grep "set interface" -f
+"
+end
