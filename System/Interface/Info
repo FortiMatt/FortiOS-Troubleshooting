@@ -7,7 +7,7 @@ show system alias | grep 'Info Interface Status' -A 2
 next
 edit "Info Interface Status"
 set command "
-get system interface physical | grep "status: up" -B4 -A1
+get system interface physical | grep 'status: up' -B4 -A1
 "
 next
 edit "Info Vlan -- Help"
@@ -18,6 +18,6 @@ show system alias | grep 'Info Vlan' -A 2
 next
 edit "Info Vlan"
 set command "
-show system interface | grep "set vlanid" -f
+show system interface | grep 'set vlanid' -f
 "
 end
