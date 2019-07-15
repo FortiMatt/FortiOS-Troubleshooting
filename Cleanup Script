@@ -31,4 +31,6 @@ delete "Info Interface Status -- Help"
 delete "Info Interface Status"
 delete "Info Vlan -- Help"
 delete "Info Vlan"
+delete "Info SD-WAN -- Help"
+delete "Info SD-WAN"
 end
