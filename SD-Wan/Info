@@ -1,9 +1,9 @@
 config system alias
 edit "Info SD-WAN -- Help"
 set command "
-diagnose sys virtual-wan-link health-check
-diagnose sys virtual-wan-link member
-diagnose sys virtual-wan-link service
+#Line 01 :
+#Line 02 :
+#Line 03 :
 "
 next
 edit "Info SD-WAN"
