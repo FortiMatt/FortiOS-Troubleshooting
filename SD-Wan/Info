@@ -1,6 +1,7 @@
 config system alias
 edit "Info SD-WAN -- Help"
 set command "
+show system alias | grep 'Info SD-WAN' -A 5
 #Line 01 :
 #Line 02 :
 #Line 03 :
