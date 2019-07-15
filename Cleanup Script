@@ -1,11 +1,34 @@
 config system alias
-alias 'DELETE ALL'
-delete 'A Helpful Troubleshooting Repo'
-delete 'DELETE ALL'
-delete 'Delete Debug Alias'
-delete 'Delete Debug Alias -- Help'
-delete 'Delete Info Alias'
-delete 'Delete Info Alias -- Help' 
-delete 'Delete TAC Alias'
-delete 'Delete TAC Alias -- Help'
+delete "Debug FortiAnalyzer -- Help"
+delete "Debug FortiAnalyzer"
+delete "Info FortiAnalyzer -- Help"
+delete "Info FortiAnalyzer"
+delete "Info FortiAnalyzer -- Help"
+delete "Info FortiAnalyzer"
+delete "Debug FortiAnalyzer -- Help"
+delete "Debug FortiAnalyzer"
+delete "TAC FortiAnalyzer -- Help"
+delete "TAC FortiAnalyzer"
+delete "Debug Webfilter -- Help"
+delete "Debug Webfilter"
+delete "Info Web Filter -- Help"
+delete "Info Web Filter"
+delete "Debug HA -- Help"
+delete "Debug HA"
+delete "Info HA -- Help"
+delete "Info HA"
+delete "Debug GUI -- Help"
+delete "Debug GUI"
+delete "Debug OSPF -- Help"
+delete "Debug OSPF"
+delete "Info OSPF -- Help"
+delete "Info OSPF"
+delete "Debug DHCP -- Help"
+delete "Debug DHCP"
+delete "Info DHCP -- Help"
+delete "Info DHCP"
+delete "Info Interface Status -- Help"
+delete "Info Interface Status"
+delete "Info Vlan -- Help"
+delete "Info Vlan"
 end
