@@ -29,7 +29,7 @@ There are two options for uploading the alias scripts into **FortiOS**.
 
 ## How to Use after Import
 
-Once the commands have been entered into FortiOS type **"alias ?"**. A list of the available troubleshooting commands will be available for you to choose from. Additionally, you have the option to TAB through the options for ease of use.
+Once the commands have been entered into FortiOS type **"alias ?"**. A list of the available troubleshooting commands will be available. Additionally, you have the option to TAB through the options for ease of use.
 
 ```
 FG200E123456789A # alias ?
