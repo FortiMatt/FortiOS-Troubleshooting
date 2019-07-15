@@ -1,0 +1,12 @@
+config system alias
+edit "Info Routing -- Help"
+set command "
+show system alias | grep 'Info Routing -- Help' -A 5
+#Line 01 : Show the Active Route Table
+"
+next
+edit "Info Routing"
+set command "
+get router info routing-table all
+"
+end
