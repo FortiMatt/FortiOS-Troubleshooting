@@ -76,7 +76,7 @@ This repo is laid out via specific FortiOS troubleshooting topics. Within each t
 - **debug** = View real-time debug within FortiOS on a specific topic
 - **TAC** = A summary of info/debug commands helpful for when creating a support ticket
 
-Each file also contains **"Help Alias'"** to support/guide you as an engineer as to what each line/command does.
+The file **ALL* contains every alias available within each section if you prefer. 
 
 ## Notice
 
