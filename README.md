@@ -18,6 +18,15 @@ One of the key things to point out when creating an alias is the command charact
 
 For more information on the alias command [CLICK HERE](https://docs.fortinet.com/document/fortigate/6.0.5/cli-reference/991461/system-alias)
 
+## How to Import Alias'
+
+There are two options for uploading the alias scripts.
+
+1. Via CLI
+   - Copy/Paste
+2. Via Configuration Scripts Upload
+   - System> Advanced > Configuration Scripts
+
 ## Navigation/Structure:
 
 This repo is laid out via specific FortiOS troubleshooting topics. Within each topic/section, there is info, debug and in some cases TAC commands.
