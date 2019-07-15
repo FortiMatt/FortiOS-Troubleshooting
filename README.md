@@ -27,6 +27,10 @@ There are two options for uploading the alias scripts into **FortiOS**.
 2. Via Configuration Scripts Upload
    - System> Advanced > Configuration Scripts
 
+## How to Use after Import
+
+Once the commands have been entered into FortiOS type "alias ?". A list of the available troubleshooting commands will be available for you to choose from. Additionally, you have the option to TAB through the options for ease of use.
+
 ## Navigation/Structure:
 
 This repo is laid out via specific FortiOS troubleshooting topics. Within each topic/section, there is info, debug and in some cases TAC commands.
