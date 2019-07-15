@@ -4,7 +4,7 @@ set command "
 show system alias | grep 'Info SD-WAN' -A 5
 #Line 01 : Show configured SLA's and Interface Status
 #Line 02 : Show members in SD-WAN Bundle
-#Line 03 : Show SD-WAN Services Configured
+#Line 03 : Show SD-WAN Rules Configured
 "
 next
 edit "Info SD-WAN"
