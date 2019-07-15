@@ -33,4 +33,6 @@ delete "Info Vlan -- Help"
 delete "Info Vlan"
 delete "Info SD-WAN -- Help"
 delete "Info SD-WAN"
+edit "Info Routing -- Help"
+edit "Info Routing"
 end
