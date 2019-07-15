@@ -20,7 +20,7 @@ For more information on the alias command [CLICK HERE](https://docs.fortinet.com
 
 ## How to Import Alias'
 
-There are two options for uploading the alias scripts.
+There are two options for uploading the alias scripts into **FortiOS**.
 
 1. Via CLI
    - Copy/Paste
