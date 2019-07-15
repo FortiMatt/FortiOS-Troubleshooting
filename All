@@ -127,6 +127,7 @@ diagnose debug application hatalk -1
 diagnose debug console timestamp enable
 diagnose debug enable
 "
+next
 edit "Info HA -- Help"
 set command "
 show system alias | grep 'Info HA' -A 6
