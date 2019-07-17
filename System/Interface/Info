@@ -1,22 +1,22 @@
 config system alias
-edit "Info Interface Status -- Help"
+edit "Info-Interface-Help"
 set command "
-show system alias | grep 'Info Interface Status' -A 2
+show system alias | grep 'Info-Interface' -A 2
 #Line 01 : Shows all physical interfaces with the status of up.
 "
 next
-edit "Info Interface Status"
+edit "Info-Interface"
 set command "
 get system interface physical | grep 'status: up' -B4 -A1
 "
 next
-edit "Info Vlan -- Help"
+edit "Info-Vlan-Help"
 set command "
-show system alias | grep 'Info Vlan' -A 2
+show system alias | grep 'Info-Vlan' -A 2
 #Line 01 : Shows all interfaces that have VLANID listed in the config.
 "
 next
-edit "Info Vlan"
+edit "Info-Vlan"
 set command "
 show system interface | grep 'set vlanid' -f
 "
