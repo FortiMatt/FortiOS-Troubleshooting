@@ -185,7 +185,7 @@ show system alias | grep 'Info-SDWAN' -A 5
 #Line 03 : Show SD-WAN Rules Configured
 "
 next
-edit "Info-SD-WAN"
+edit "Info-SDWAN"
 set command "
 diagnose sys virtual-wan-link health-check
 diagnose sys virtual-wan-link member
