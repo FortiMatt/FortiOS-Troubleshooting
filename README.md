@@ -34,38 +34,43 @@ Once the commands have been entered into FortiOS type **"alias ?"**. A list of t
 ```
 FG200E123456789A # alias ?
 name    Alias command name.
-Debug DHCP
-Debug DHCP -- Help
-Debug FortiAnalyzer
-Debug FortiAnalyzer -- Help
-Debug GUI
-Debug GUI -- Help
-Debug HA
-Debug HA -- Help
-Debug OSPF
-Debug OSPF -- Help
-Debug Webfilter
-Debug Webfilter -- Help
-Info DHCP
-Info DHCP -- Help
-Info FortiAnalyzer
-Info FortiAnalyzer -- Help
-Info HA
-Info HA -- Help
-Info Interface Status
-Info Interface Status -- Help
-Info OSPF
-Info OSPF -- Help
-Info Routing
-Info Routing -- Help
-Info SD-WAN
-Info SD-WAN -- Help
-Info Vlan
-Info Vlan -- Help
-Info Web Filter
-Info Web Filter -- Help
-TAC FortiAnalyzer
-TAC FortiAnalyzer -- Help
+Debug-DHCP
+Debug-DHCP-Help
+Debug-FortiAnalyzer
+Debug-FortiAnalyzer-Help
+Debug-GUI
+Debug-GUI-Help
+Debug-HA
+Debug-HA-Help
+Debug-OSPF
+Debug-OSPF-Help
+Debug-VRRP
+Debug-VRRP-Help
+Debug-Webfilter
+Debug-Webfilter-Help
+Info-DHCP
+Info-DHCP-Help
+Info-FortiAnalyzer
+Info-FortiAnalyzer-Help
+Info-HA
+Info-HA-Help
+Info-Interface
+Info-Interface-Help
+Info-OSPF
+Info-OSPF-Help
+Info-Routing
+Info-Routing-Help
+Info-SDWAN
+Info-SDWAN-Help
+Info-VRRP
+Info-VRRP-Help
+Info-Vlan
+Info-Vlan-Help
+Info-Webfilter
+Info-Webfilter-Help
+TAC-FortiAnalyzer
+TAC-FortiAnalyzer-Help
+
 ```
 
 ## Navigation/Structure:
