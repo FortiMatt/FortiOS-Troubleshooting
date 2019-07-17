@@ -1,12 +1,12 @@
 config system alias
-edit "Info DHCP -- Help"
+edit "Info-DHCP-Help"
 set command "
-show system alias | grep 'Info DHCP' -A 3
+show system alias | grep 'Info-DHCP' -A 3
 #Line 01 : Show configured DHCP Servers in FortiOS
 #Line 02 : Show DHCP List. Default = All or define via <interface>
 "
 next
-edit "Info DHCP"
+edit "Info-DHCP"
 set command "
 show system dhcp server
 execute dhcp lease-list 
