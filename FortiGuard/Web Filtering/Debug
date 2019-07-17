@@ -1,13 +1,13 @@
 config system alias
-edit "Debug Webfilter -- Help"
+edit "Debug-Webfilter-Help"
 set command "
-show system alias | grep 'Debug Webfilter' -A 3
+show system alias | grep 'DebugWebfilter' -A 3
 #Line 01 : Debug rating requests and responses from FortiGuard
 #NOTE: Specify a URL (diagnose debug application urlfilter -1 | grep domain.com)
 #Line 02 : Enable the debug
 "
 next
-edit "Debug Webfilter"
+edit "Debug-Webfilter"
 set command "
 diagnose debug application urlfilter -1
 diagnose debug enable
