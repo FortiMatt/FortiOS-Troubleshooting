@@ -251,7 +251,7 @@ show system alias | grep 'Info-Networks' -A 2
 #Line 01 : Shows all configured networks and gateways
 "
 next
-edit "Info-Networks-IP"
+edit "Info-Networks"
 set command "
 diagnose ip address list
 "
