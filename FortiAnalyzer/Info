@@ -1,5 +1,5 @@
 config system alias
-edit "Info FortiAnalyzer -- Help"
+edit "Info-FortiAnalyzer-Help"
 set command "
 show system alias | grep 'Info FortiAnalyzer' -A 5
 #Line 01 : Show FAZ Log settings
@@ -8,7 +8,7 @@ show system alias | grep 'Info FortiAnalyzer' -A 5
 #Line 04 : Verfiy FG Event Settings
 "
 next
-edit "Info FortiAnalyzer"
+edit "Info-FortiAnalyzer"
 set command "
 get log fortianalyzer setting
 get log fortianalyzer filter
