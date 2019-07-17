@@ -1,4 +1,11 @@
+#FortiOS-Troubleshooting Repository
+#https://github.com/FortiMatt/FortiOS-Troubleshooting
+#Developed by Matt James a.k.a FortiMatt
+#This script is not endorsed/verified by Fortinet
+#USE AT YOUR OWN RISK
+
 config system alias
+#FORTIANALYZER ------------------
 edit "Debug-FortiAnalyzer-Help"
 set command "
 show system alias | grep 'Debug-FortiAnalyzer' -A 3
@@ -52,6 +59,7 @@ alias 'Debug FortiAnalyzer'
 diagnose debug enable
 "
 next
+#WEBFILTER ------------------
 edit "Debug-Webfilter-Help"
 set command "
 show system alias | grep 'Debug-Webfilter' -A 3
@@ -81,6 +89,7 @@ diagnose debug rating
 diagnose test application urlfilter 3
 "
 next
+#HIGH AVAILABLITY ------------------
 edit "Debug-HA-Help"
 set command "
 show system alias | grep 'Debug-HA' -A 5
@@ -117,6 +126,7 @@ diagnose sys ha status
 diagnose sys ha checksum show
 "
 next
+#GUI ------------------
 edit "Debug-GUI-Help"
 set command "
 show system alias | grep 'Info-GUI' -A 3
@@ -130,6 +140,7 @@ diagnose debug cli 5
 diagnose debug enable
 "
 next
+#ROUTING ------------------
 edit "Info-Routing-Help"
 set command "
 show system alias | grep 'Info-Routing -- Help' -A 5
@@ -177,6 +188,7 @@ get router info ospf database router lsa
 get router info ospf database self-originate
 "
 next
+#SDWAN ------------------
 edit "Info-SDWAN-Help"
 set command "
 show system alias | grep 'Info-SDWAN' -A 5
@@ -192,6 +204,7 @@ diagnose sys virtual-wan-link member
 diagnose sys virtual-wan-link service
 "
 next
+#DHCP ------------------
 edit "Debug-DHCP-Help"
 set command "
 show system alias | grep 'Debug-DHCP' -A 3
@@ -218,6 +231,7 @@ show system dhcp server
 execute dhcp lease-list 
 "
 next
+#INTERFACE ------------------
 edit "Info-Interface-Help"
 set command "
 show system alias | grep 'Info-Interface' -A 2
@@ -240,6 +254,7 @@ set command "
 show system interface | grep 'set vlanid' -f
 "
 next
+#VRRP ------------------
 edit "Debug-VRRP-Help"
 set command "
 show system alias | grep 'Debug-VRRP' -A 4
