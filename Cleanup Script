@@ -31,4 +31,8 @@ delete "Info-SDWAN-Help"
 delete "Info-SDWAN"
 delete "Info-Routing-Help"
 delete "Info-Routing"
+delete "Debug-VRRP-Help"
+delete "Debug-VRRP"
+delete "Info-VRRP-Help"
+delete "Info-VRRP"
 end
