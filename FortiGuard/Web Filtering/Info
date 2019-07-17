@@ -12,4 +12,5 @@ set command "
 get system fortiguard | grep webfilter-
 diagnose debug rating
 diagnose test application urlfilter 3
+"
 end
