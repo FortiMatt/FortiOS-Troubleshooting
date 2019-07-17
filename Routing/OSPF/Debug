@@ -1,13 +1,13 @@
 config system alias
-edit "Debug OSPF -- Help"
+edit "Debug-OSPF-Help"
 set command "
-show system alias | grep 'Debug OSPF' -A 4
+show system alias | grep 'Debug-OSPF' -A 4
 #Line 01 : Debugs all OSPF packets
 #Line 02 : Debug severity level to log <critical | error | warn | info | none>
 #Line 03 : Enable the Debug
 "
 next
-edit "Debug OSPF"
+edit "Debug-OSPF"
 set command "
 diagnose ip router ospf all enable
 diagnose ip router ospf level info
