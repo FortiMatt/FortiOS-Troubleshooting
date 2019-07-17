@@ -1,0 +1,56 @@
+config system alias
+edit "Restart-netscan" 
+set command "
+fnsysctl killall netscan
+"
+next 
+edit "Restart-dnsproxy" 
+set command "
+fnsysctl killall dnsproxy
+"
+next 
+edit "Restart-ipshelper" 
+set command "
+fnsysctl killall ipshelper
+"
+next 
+edit "Restart-updated" 
+set command "
+fnsysctl killall updated
+"
+next 
+edit "Restart-srcvis" 
+set command "
+fnsysctl killall src-vis
+"
+next 
+edit "Restart-miglogd" 
+set command "
+fnsysctl killall miglogd
+"
+next 
+edit "Restart-ipsengine" 
+set command "
+fnsysctl killall ipsengine
+"
+next 
+edit "Restart-cmdbsvr" 
+set command "
+fnsysctl killall cmdbsvr
+"
+next
+edit "Restart-scanunitd" 
+set command "
+fnsysctl killall scanunitd
+"
+next 
+edit "Restart-forticron" 
+set command "
+fnsysctl killall forticron
+"
+next 
+edit "Restart-pfcgid" 
+set command "
+fnsysctl killall pyfcgid
+"
+end
