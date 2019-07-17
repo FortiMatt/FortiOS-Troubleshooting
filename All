@@ -294,4 +294,15 @@ set command "
 get router info vrrp
 "
 next
+#HARDWARE ------------------
+edit "Info-CPU-Help"
+set command "
+show system alias | grep 'Info-CPU' -A 2
+#Line 01: Show CPU Statistics
+"
+next
+edit "Info-CPU"
+set command "
+get hardware cpu
+"
 end
