@@ -68,9 +68,19 @@ Info-Vlan
 Info-Vlan-Help
 Info-Webfilter
 Info-Webfilter-Help
+Restart-cmdbsvr
+Restart-dnsproxy
+Restart-forticron
+Restart-ipsengine
+Restart-ipshelper
+Restart-miglogd
+Restart-netscan
+Restart-pfcgid
+Restart-scanunitd
+Restart-srcvis
+Restart-updated
 TAC-FortiAnalyzer
 TAC-FortiAnalyzer-Help
-
 ```
 
 ## Navigation/Structure:
