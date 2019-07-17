@@ -43,4 +43,6 @@ delete "Debug-VRRP-Help"
 delete "Debug-VRRP"
 delete "Info-VRRP-Help"
 delete "Info-VRRP"
+delete "Info-CPU-Help"
+delete "Info-CPU"
 end
