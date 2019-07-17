@@ -1,7 +1,7 @@
 config system alias
 edit "Debug-FortiAnalyzer-Help"
 set command "
-show system alias | grep 'Debug FortiAnalyzer' -A 3
+show system alias | grep 'Debug-FortiAnalyzer' -A 3
 #Line 01 : Test connection to FAZ
 #Line 02 : Check FAZ Log Queue
 "
@@ -14,7 +14,7 @@ diagnose test app miglogd 6
 next
 edit "Info-FortiAnalyzer-Help"
 set command "
-show system alias | grep 'Info FortiAnalyzer' -A 5
+show system alias | grep 'Info-FortiAnalyzer' -A 5
 #Line 01 : Show FAZ Log settings
 #Line 02 : Show what events are sent to FAZ
 #Line 03 : Verify FG Log Settings
@@ -31,7 +31,7 @@ get log eventfilter
 next
 edit "Info-FortiAnalyzer-Help"
 set command "
-show system alias | grep 'Info FortiAnalyzer' -A 5
+show system alias | grep 'Info-FortiAnalyzer' -A 5
 #Line 01 : Show FAZ Log settings
 #Line 02 : Show what events are sent to FAZ
 #Line 03 : Verify FG Log Settings
@@ -48,7 +48,7 @@ get log eventfilter
 next
 edit "Debug-FortiAnalyzer-Help"
 set command "
-show system alias | grep 'Debug FortiAnalyzer' -A 3
+show system alias | grep 'Debug-FortiAnalyzer' -A 3
 #Line 01 : Test connection to FAZ
 #Line 02 : Check FAZ Log Queue
 "
@@ -61,7 +61,7 @@ diagnose test app miglogd 6
 next
 edit "TAC-FortiAnalyzer-Help"
 set command "
-show system alias | grep 'TAC FortiAna' -A 8
+show system alias | grep 'TAC-FortiAna' -A 8
 #Line 01 : Show System Settings
 #Line 02 : Show System Perf
 #Line 03 : Show Log Status
@@ -84,7 +84,7 @@ diagnose debug enable
 next
 edit "Debug-Webfilter-Help"
 set command "
-show system alias | grep 'Debug Webfilter' -A 3
+show system alias | grep 'Debug-Webfilter' -A 3
 #Line 01 : Debug rating requests and responses from FortiGuard
 #NOTE: Specify a URL (diagnose debug application urlfilter -1 | grep domain.com)
 #Line 02 : Enable the debug
@@ -96,15 +96,15 @@ diagnose debug application urlfilter -1
 diagnose debug enable
 "
 next
-edit "Info-Web Filter-Help"
+edit "Info-Webfilter-Help"
 set command "
-show system alias | grep 'Info Web Filter' -A 4
+show system alias | grep 'Info-Webfilter' -A 4
 #Line 01 : Show FortiGuard Webfilter Licensing Information
 #Line 02 : Show FortiGuard Webfilter Status
 #Line 03 : Show FortiGuard Webfilter Cache
 "
 next
-edit "Info-Web Filter"
+edit "Info-Webfilter"
 set command "
 get system fortiguard | grep webfilter-
 diagnose debug rating
@@ -113,7 +113,7 @@ diagnose test application urlfilter 3
 next
 edit "Debug-HA-Help"
 set command "
-show system alias | grep 'Debug HA' -A 5
+show system alias | grep 'Debug-HA' -A 5
 #Line 01 : Debug HA Sync
 #Line 02 : Debug HA Talk 
 #Line 03 : Enable Timestamp in output
@@ -130,7 +130,7 @@ diagnose debug enable
 next
 edit "Info-HA-Help"
 set command "
-show system alias | grep 'Info HA' -A 6
+show system alias | grep 'Info-HA' -A 6
 #Line 01 : Show Hardware Status
 #Line 02 : Show General Info & Licensing Information
 #Line 03 : HA Cluster Information
@@ -149,7 +149,7 @@ diagnose sys ha checksum show
 next
 edit "Debug-GUI-Help"
 set command "
-show system alias | grep 'Info GUI' -A 3
+show system alias | grep 'Info-GUI' -A 3
 #Line 01 : Turns on CLI debug to see what commands are entered via GUI
 #Line 02 : Enable the debug
 "
@@ -162,7 +162,7 @@ diagnose debug enable
 next
 edit "Info-Routing-Help"
 set command "
-show system alias | grep 'Info Routing -- Help' -A 5
+show system alias | grep 'Info-Routing -- Help' -A 5
 #Line 01 : Show the Active Route Table
 "
 next
@@ -173,7 +173,7 @@ get router info routing-table all
 next
 edit "Debug-OSPF-Help"
 set command "
-show system alias | grep 'Debug OSPF' -A 4
+show system alias | grep 'Debug-OSPF' -A 4
 #Line 01 : Debugs all OSPF packets
 #Line 02 : Debug severity level to log <critical | error | warn | info | none>
 #Line 03 : Enable the Debug
@@ -188,7 +188,7 @@ diagnose debug enable
 next
 edit "Info-OSPF-Help"
 set command "
-show system alias | grep 'Info OSPF' -A 7
+show system alias | grep 'Info-OSPF' -A 7
 #Line 01 : OSPF status
 #Line 02 : Info on OSPF interfaces
 #Line 03 : Info on OSPF neighbors
@@ -207,9 +207,9 @@ get router info ospf database router lsa
 get router info ospf database self-originate
 "
 next
-edit "Info-SD-WAN-Help"
+edit "Info-SDWAN-Help"
 set command "
-show system alias | grep 'Info SD-WAN' -A 5
+show system alias | grep 'Info-SDWAN' -A 5
 #Line 01 : Show configured SLA's and Interface Status
 #Line 02 : Show members in SD-WAN Bundle
 #Line 03 : Show SD-WAN Rules Configured
@@ -224,7 +224,7 @@ diagnose sys virtual-wan-link service
 next
 edit "Debug-DHCP-Help"
 set command "
-show system alias | grep 'Debug DHCP' -A 3
+show system alias | grep 'Debug-DHCP' -A 3
 #Line 01: Turn on the debug for DHCP
 #Line 02: Enable the debug
 "
@@ -237,7 +237,7 @@ diagnose debug enable
 next
 edit "Info-DHCP-Help"
 set command "
-show system alias | grep 'Info DHCP' -A 3
+show system alias | grep 'Info-DHCP' -A 3
 #Line 01 : Show configured DHCP Servers in FortiOS
 #Line 02 : Show DHCP List. Default = All or define via <interface>
 "
@@ -248,20 +248,20 @@ show system dhcp server
 execute dhcp lease-list 
 "
 next
-edit "Info-Interface Status-Help"
+edit "Info-Interface-Help"
 set command "
-show system alias | grep 'Info Interface Status' -A 2
+show system alias | grep 'Info-Interface' -A 2
 #Line 01 : Shows all physical interfaces with the status of up.
 "
 next
-edit "Info-Interface Status"
+edit "Info-Interface"
 set command "
 get system interface physical | grep 'status: up' -B4 -A1
 "
 next
 edit "Info-Vlan-Help"
 set command "
-show system alias | grep 'Info Vlan' -A 2
+show system alias | grep 'Info-Vlan' -A 2
 #Line 01 : Shows all interfaces that have VLANID listed in the config.
 "
 next
