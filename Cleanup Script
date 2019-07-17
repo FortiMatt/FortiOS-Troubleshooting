@@ -1,3 +1,9 @@
+#FortiOS-Troubleshooting Repository
+#https://github.com/FortiMatt/FortiOS-Troubleshooting
+#Developed by Matt James a.k.a FortiMatt
+#This script is not endorsed/verified by Fortinet
+#USE AT YOUR OWN RISK
+
 config system alias
 delete "Debug-FortiAnalyzer-Help"
 delete "Debug-FortiAnalyzer"
