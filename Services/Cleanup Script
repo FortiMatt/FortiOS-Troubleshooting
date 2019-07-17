@@ -1,0 +1,13 @@
+config system alias
+delete "Restart-netscan" 
+delete "Restart-dnsproxy" 
+delete "Restart-ipshelper" 
+delete "Restart-updated" 
+delete "Restart-srcvis" 
+delete "Restart-miglogd" 
+delete "Restart-ipsengine" 
+delete "Restart-cmdbsvr" 
+delete "Restart-scanunitd" 
+delete "Restart-forticron"  
+delete "Restart-pfcgid" 
+end
