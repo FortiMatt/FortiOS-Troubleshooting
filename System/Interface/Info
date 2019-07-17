@@ -10,6 +10,17 @@ set command "
 get system interface physical | grep 'status: up' -B4 -A1
 "
 next
+edit "Info-Networks-Help"
+set command "
+show system alias | grep 'Info-Networks' -A 2
+#Line 01 : Shows all configured networks and gateways
+"
+next
+edit "Info-Networks-IP"
+set command "
+diagnose ip address list
+"
+next
 edit "Info-Vlan-Help"
 set command "
 show system alias | grep 'Info-Vlan' -A 2
