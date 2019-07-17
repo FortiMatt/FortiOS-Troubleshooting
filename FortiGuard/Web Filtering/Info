@@ -1,16 +1,15 @@
 config system alias
-edit "Info-WebFilter-Help"
+edit "Info-Webfilter-Help"
 set command "
-show system alias | grep 'Info-WebFilter' -A 4
+show system alias | grep 'Info-Webfilter' -A 4
 #Line 01 : Show FortiGuard Webfilter Licensing Information
 #Line 02 : Show FortiGuard Webfilter Status
 #Line 03 : Show FortiGuard Webfilter Cache
 "
 next
-edit "Info-WebFilter"
+edit "Info-Webfilter"
 set command "
 get system fortiguard | grep webfilter-
 diagnose debug rating
 diagnose test application urlfilter 3
-"
 end
