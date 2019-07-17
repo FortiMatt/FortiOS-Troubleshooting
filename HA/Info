@@ -1,7 +1,7 @@
 config system alias
-edit "Info HA -- Help"
+edit "Info-HA-Help"
 set command "
-show system alias | grep 'Info HA' -A 6
+show system alias | grep 'Info-HA' -A 6
 #Line 01 : Show Hardware Status
 #Line 02 : Show General Info & Licensing Information
 #Line 03 : HA Cluster Information
@@ -9,7 +9,7 @@ show system alias | grep 'Info HA' -A 6
 #Line 05 : Compare HA Checksums
 "
 next
-edit "Info HA"
+edit "Info-HA"
 set command "
 get system performance status
 get system status
