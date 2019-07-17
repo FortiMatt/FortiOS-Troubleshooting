@@ -1,0 +1,13 @@
+config system alias
+edit "Info-VRRP-Help"
+set command "
+show system alias | grep 'Info-VRRP' -A 2
+#Line 01 : Show VRRP config
+"
+next
+edit "Info-VRRP"
+set command "
+get router info vrrp
+"
+next
+end
