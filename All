@@ -239,4 +239,31 @@ edit "Info-Vlan"
 set command "
 show system interface | grep 'set vlanid' -f
 "
+next
+edit "Debug-VRRP-Help"
+set command "
+show system alias | grep 'Debug-VRRP' -A 4
+#Line 01 : Debug VRRP Group-ID's mismatch
+#Line 02 : Debug VRRP Packets
+#Line 03 : Enable the Debug
+"
+next
+edit "Debug-VRRP"
+set command "
+diagnose debug application vrrpd -1
+diagnose sniffer packet any 'proto 112' 6 0 a
+diagnose debug enable
+"
+next
+edit "Info-VRRP-Help"
+set command "
+show system alias | grep 'Info-VRRP' -A 2
+#Line 01 : Show VRRP config
+"
+next
+edit "Info-VRRP"
+set command "
+get router info vrrp
+"
+next
 end
