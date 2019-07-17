@@ -1,5 +1,5 @@
 config system alias
-edit "Info FortiAnalyzer -- Help"
+edit "Info-FortiAnalyzer-Help"
 set command "
 show system alias | grep 'Info FortiAnalyzer' -A 5
 #Line 01 : Show FAZ Log settings
@@ -8,7 +8,7 @@ show system alias | grep 'Info FortiAnalyzer' -A 5
 #Line 04 : Verfiy FG Event Settings
 "
 next
-edit "Info FortiAnalyzer"
+edit "Info-FortiAnalyzer"
 set command "
 get log fortianalyzer setting
 get log fortianalyzer filter
@@ -16,20 +16,20 @@ get log setting
 get log eventfilter
 "
 next
-edit "Debug FortiAnalyzer -- Help"
+edit "Debug-FortiAnalyzer-Help"
 set command "
 show system alias | grep 'Debug FortiAnalyzer' -A 3
 #Line 01 : Test connection to FAZ
 #Line 02 : Check FAZ Log Queue
 "
 next
-edit "Debug FortiAnalyzer"
+edit "Debug-FortiAnalyzer"
 set command "
 exec log fortianalyzer test-connectivity
 diagnose test app miglogd 6
 "
 next
-edit "TAC FortiAnalyzer -- Help"
+edit "TAC-FortiAnalyzer-Help"
 set command "
 show system alias | grep 'TAC FortiAna' -A 8
 #Line 01 : Show System Settings
@@ -41,7 +41,7 @@ show system alias | grep 'TAC FortiAna' -A 8
 #Line 07 : Enable Debug
 "
 next
-edit "TAC FortiAnalyzer"
+edit "TAC-FortiAnalyzer"
 set command "
 get sys status
 get sys performance status
