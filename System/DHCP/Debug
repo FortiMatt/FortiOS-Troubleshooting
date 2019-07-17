@@ -1,12 +1,12 @@
 config system alias
-edit "Debug DHCP -- Help"
+edit "Debug-DHCP-Help"
 set command "
-show system alias | grep 'Debug DHCP' -A 3
+show system alias | grep 'Debug-DHCP' -A 3
 #Line 01: Turn on the debug for DHCP
 #Line 02: Enable the debug
 "
 next
-edit "Debug DHCP"
+edit "Debug-DHCP"
 set command "
 diagnose debug application dhcps -1
 diagnose debug enable
