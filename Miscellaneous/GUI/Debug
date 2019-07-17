@@ -1,12 +1,12 @@
 config system alias
-edit "Debug GUI -- Help"
+edit "Debug-GUI-Help"
 set command "
-show system alias | grep 'Info GUI' -A 3
+show system alias | grep 'Info-GUI' -A 3
 #Line 01 : Turns on CLI debug to see what commands are entered via GUI
 #Line 02 : Enable the debug
 "
 next
-edit "Debug GUI"
+edit "Debug-GUI"
 set command "
 diagnose debug cli 5
 diagnose debug enable
