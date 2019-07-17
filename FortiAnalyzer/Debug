@@ -1,14 +1,16 @@
 config system alias
 edit "Debug-FortiAnalyzer-Help"
 set command "
-show system alias | grep 'Debug-FortiAnalyzer' -A 3
+show system alias | grep 'Debug-FortiAnalyzer' -A 4
 #Line 01 : Test connection to FAZ
 #Line 02 : Check FAZ Log Queue
+#Line 03 : Check miglogd communication
 "
 next
 edit "Debug-FortiAnalyzer"
 set command "
 exec log fortianalyzer test-connectivity
 diagnose test app miglogd 6
+diagnose debug application miglogd -1
 "
 end
