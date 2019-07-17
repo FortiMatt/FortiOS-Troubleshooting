@@ -1,0 +1,17 @@
+config system alias
+edit "Debug-VRRP-Help"
+set command "
+show system alias | grep 'Debug-VRRP' -A 4
+#Line 01 : Debug VRRP Group-ID's mismatch
+#Line 02 : Debug VRRP Packets
+#Line 03 : Enable the Debug
+"
+next
+edit "Debug-VRRP"
+set command "
+diagnose debug application vrrpd -1
+diagnose sniffer packet any 'proto 112' 6 0 a
+diagnose debug enable
+"
+next
+end
