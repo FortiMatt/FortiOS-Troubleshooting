@@ -1,7 +1,7 @@
 config system alias
-edit "Info OSPF -- Help"
+edit "Info-OSPF-Help"
 set command "
-show system alias | grep 'Info OSPF' -A 7
+show system alias | grep 'Info-OSPF' -A 7
 #Line 01 : OSPF status
 #Line 02 : Info on OSPF interfaces
 #Line 03 : Info on OSPF neighbors
@@ -10,7 +10,7 @@ show system alias | grep 'Info OSPF' -A 7
 #Line 06 : Info on LSAs originating from FG
 "
 next
-edit "Info OSPF"
+edit "Info-OSPF"
 set command "
 get router info ospf status
 get router info ospf interface
