@@ -48,6 +48,8 @@ Debug-VRRP
 Debug-VRRP-Help
 Debug-Webfilter
 Debug-Webfilter-Help
+Info-CPU
+Info-CPU-Help
 Info-DHCP
 Info-DHCP-Help
 Info-FortiAnalyzer
@@ -56,6 +58,8 @@ Info-HA
 Info-HA-Help
 Info-Interface
 Info-Interface-Help
+Info-Networks
+Info-Networks-Help
 Info-OSPF
 Info-OSPF-Help
 Info-Routing
