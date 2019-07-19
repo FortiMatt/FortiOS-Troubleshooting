@@ -8,7 +8,6 @@ Well, I decided to create **alias** commands for standard FortiOS configuration 
 ```
 config system alias
   edit {name}
-    set name {string}   Alias command name. size[35]
     set command {string}   Command list to execute. size[255]
   next
 end
