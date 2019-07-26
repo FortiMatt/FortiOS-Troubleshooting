@@ -100,4 +100,4 @@ If you wish to remove all of the helpful Alias commands run or import the **Clea
 
 ## Notice
 
-Please note that this repo is not publically endorsed/supported by Fortinet. I am just a sales engineer trying to make my life easier. Feel free to submit any additonal topics command via https://forms.gle/r14jt4Yoxb36cLsG8
+Please note that this repo is not publically endorsed/supported by Fortinet. I am just a sales engineer trying to make my life easier. Feel free to submit any additonal topics command via [Google Form] (https://forms.gle/r14jt4Yoxb36cLsG8)
