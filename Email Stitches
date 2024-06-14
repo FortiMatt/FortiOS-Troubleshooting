@@ -1,0 +1,465 @@
+##### FIND AND REPLACE EMAIL ADDRESS AND SMTP CONFIG #####
+
+### EMAIL TO = to_email@gmail.com
+### EMAIL FROM = from_email@gmail.com
+
+### SMTP SERVER = smtp.gmail.com
+### SMTP SERVER PORT = 465
+### SMTP USER PASSWORD = SMTP_PASSWORD
+### SMTP SERCURITY TYPE = smtps
+
+###### CREATE EMAIL/SMTP SERVER ######
+
+config system email-server
+    set reply-to "from_email@gmail.com"
+    set server "smtp.gmail.com"
+    set port 465
+    set authenticate enable
+    set username "from_email@gmail.com"
+    set password SMTP_PASSWORD
+    set security smtps
+end
+
+###### CREATE TROUBLESHOOTING COMMANDS ######
+config system automation-action
+    edit "to_email@gmail.com"
+        set action-type email
+        set email-to "to_email@gmail.com"
+        set email-from "from_email@gmail.com"
+        set email-subject "%%log.srcip%% // Troubleshooting"
+        set message "%%results%%"
+    next
+    edit "GET_TSHOOT"
+        set action-type cli-script
+        set script "get system status
+diagnose autoupdate versions
+get hardware status
+execute time
+execute date
+get system performance status
+get system session-info full-stat
+get sys performance firewall statistics
+get hardware memory"
+        set accprofile "super_admin"
+    next
+    edit "DIAG_SYS_TSHOOT"
+        set action-type cli-script
+        set script "diagnose hardware sysinfo interrupts
+diagnose sys top 5 40 5
+q
+diagnose sys session full-stat
+diagnose sys mpstat 1 1
+diagnose sys vd list
+fnsysctl cat /proc/net/snmp
+fnsysctl cat /proc/softirqs
+diagnose sys cmdb info"
+        set accprofile "super_admin"
+    next
+    edit "DIAG_IPS_TSHOOT"
+        set action-type cli-script
+        set script "diagnose ips packet status
+diagnose ips session list
+diagnose ips av cache list
+diagnose ips memory status
+diagnose ips anomaly status
+diagnose ips session content
+diagnose ips dissector status
+diagnose ips signature cycle
+diagnose ips av cache status
+diagnose ips share list
+diagnose ips signature status
+diagnose ips session performance
+diagnose ips ssl status
+diagnose ips share pool
+diagnose ips signature hit
+diagnose ips session list by-mem 30
+diagnose ips urlfilter status
+diagnose ips anomaly list
+diagnose ips raw status
+diagnose ips session status
+diagnose ips dac info"
+        set accprofile "super_admin"
+    next 
+    edit "DIAG_HARDWARE_TSHOOT"
+        set action-type cli-script
+        set script "diagnose hardware sysinfo shm
+diagnose hardware sysinfo conserve
+diagnose hardware sysinfo memory
+diagnose hardware sysinfo slab"
+        set accprofile "super_admin"
+    next
+    edit "DIAG_WAD_1_TSHOOT"
+        set action-type cli-script
+        set script "diagnose wad memory all
+diagnose test application wad 1000
+diagnose wad stats
+diagnose wad memory workers"
+        set accprofile "super_admin"
+    next
+    edit "DIAG_SYS_PROFILE_TSHOOT"
+        set action-type cli-script
+        set script "diagnose sys profile start
+diagnose sys profile stop
+diagnose sys profile show order
+diagnose sys profile module
+diagnose sys profile show detail
+diagnose sys profile cpumask 00"
+        set accprofile "super_admin"
+    next
+    edit "DIAG_IPS_MEM_TSHOOT"
+        set action-type cli-script
+        set script "diagnose ips memory track-size 0 4294967295
+diagnose ips memory track enable
+diagnose ips memory track-print
+diagnose ips memory status
+diagnose ips session list by-mem
+diagnose ips memory track clear
+diagnose ips memory track disable"
+        set accprofile "super_admin"
+    next
+    edit "DIAG_NPU_TSHOOT"
+        set action-type cli-script
+        set script "diagnose npu np6litelite dce
+diagnose npu np6litelite dce 0
+diagnose npu np6lite session-stats 0
+diagnose npu np6lite anomaly-drop 0
+diagnose npu np6lite sse-stats 0
+diagnose npu np6lite register 0
+diagnose npu np6lite port-list"
+        set accprofile "super_admin"
+    next
+    edit "DIAG_WAD_2_TSHOOT"
+        set action-type cli-script
+        set script "diagnose test application wad 27
+diagnose test application wad 23
+diagnose test application wad 1
+diagnose test application wad 25
+diagnose test application wad 33
+diagnose test application wad 2
+diagnose test application wad 3
+diagnose test application wad 21
+diagnose test application wad 803
+diagnose test application wad 1000
+diagnose test application wad 120"
+        set accprofile "super_admin"
+    next
+    edit "DIAG_IPSM_TSHOOT"
+        set action-type cli-script
+        set script "diagnose test application ipsm 1
+diagnose test application ipsm 13
+diagnose snmp ip frags"
+        set accprofile "super_admin"
+    next
+    edit "DIAG_SYS_SESS_TSHOOT"
+        set action-type cli-script
+        set script "diagnose sys session sync
+diagnose sys session stat
+diagnose sys session exp-stat
+diagnose sys process sock-mem
+diagnose sys process sock-mem ips 
+diagnose sys process sock-mem wad
+diagnose sys process sock-mem proxyd
+diagnose sys process sock-mem av"
+        set accprofile "super_admin"
+    next
+    edit "DIAG_FNSYSCTL_TSHOOT"
+        set action-type cli-script
+        set script "fnsysctl df -h
+fnsysctl du /dev/cmdb
+fnsysctl du /tmp /dev/shm /dev/cmdb
+fnsysctl df -k
+fnsysctl du /tmp
+fnsysctl du -l /tmp
+fnsysctl ls -i /tmp
+fnsysctl ls -a /tmp
+fnsysctl du /dev/shm
+fnsysctl du -l /dev/shm
+fnsysctl ls -i /dev/shm
+fnsysctl ls -a /dev/shm
+fnsysctl du /node-scripts
+fnsysctl ls -l /node-scripts
+fnsysctl du -i /node-scripts
+fnsysctl du -a /node-scripts
+fnsysctl du -a / -d 1
+fnsysctl du /dev/cmdb"
+        set accprofile "super_admin"
+    next
+    edit "DIAG_WAD_3_TSHOOT"
+        set action-type cli-script
+        set script "diagnose test app wad 1000
+diagnose test app wad 2200
+diagnose test app wad 803
+diagnose test app wad 2
+diagnose test app wad 3
+diagnose test app wad 23
+diagnose test app wad 25
+diagnose test app wad 27
+diagnose test app wad 33
+diagnose test app wad 70
+diagnose test app wad 2201
+diagnose test app wad 803
+diagnose test app wad 2
+diagnose test app wad 3
+diagnose test app wad 23
+diagnose test app wad 25
+diagnose test app wad 27
+diagnose test app wad 33
+diagnose test app wad 70
+diagnose test app wad 2202
+diagnose test app wad 803
+diagnose test app wad 2
+diagnose test app wad 3"
+        set accprofile "super_admin"
+    next
+    edit "DIAG_WAD_4_TSHOOT"
+        set action-type cli-script
+        set script "diagnose test app wad 23
+diagnose test app wad 25
+diagnose test app wad 27
+diagnose test app wad 33
+diagnose test app wad 70
+diagnose test app wad 2203
+diagnose test app wad 803
+diagnose test app wad 2
+diagnose test app wad 3
+diagnose test app wad 23
+diagnose test app wad 25
+diagnose test app wad 27
+diagnose test app wad 33
+diagnose test app wad 70
+diagnose test app wad 2204
+diagnose test app wad 803
+diagnose test app wad 2
+diagnose test app wad 3
+diagnose test app wad 23
+diagnose test app wad 25
+diagnose test app wad 27
+diagnose test app wad 33
+diagnose test app wad 70"
+        set accprofile "super_admin"
+    next
+    edit "DIAG_WAD_MEM_TSHOOT"
+        set action-type cli-script
+        set script "
+diagnose wad memory report
+"
+        set accprofile "super_admin"
+    next
+end
+###### CREATE SCHEDULE ######
+config system automation-trigger
+    edit "SCHEDULE_HALF_HOUR"
+        set trigger-type scheduled
+        set trigger-frequency hourly
+        set trigger-minute 30
+    next
+    edit "SCHEDULE_QUARTER_HOUR"
+        set trigger-type scheduled
+        set trigger-frequency hourly
+        set trigger-minute 15
+    next
+    edit "SCHEDULE_THIRD_HOUR"
+        set trigger-type scheduled
+        set trigger-frequency hourly
+        set trigger-minute 45
+    next
+    edit "SCHEDULE_FULL_HOUR"
+        set trigger-type scheduled
+        set trigger-frequency hourly
+        set trigger-minute 1
+    next
+end
+
+###### CREATE STITCH ######
+config system automation-stitch
+    edit "TROUBLESHOOTING_SCRIPT_1_FULL"
+        set trigger "SCHEDULE_FULL_HOUR"
+        config actions
+            edit 1
+                set action "DIAG_FNSYSCTL_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 2
+                set action "DIAG_HARDWARE_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 3
+                set action "DIAG_IPS_MEM_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 4
+                set action "DIAG_IPS_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 5
+                set action "DIAG_IPSM_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 6
+                set action "DIAG_NPU_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 7
+                set action "DIAG_SYS_PROFILE_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 8
+                set action "to_email@gmail.com"
+                set delay 5
+                set required enable
+            next
+        end
+    next
+    edit "TROUBLESHOOTING_SCRIPT_1_HALF"
+        set trigger "SCHEDULE_HALF_HOUR"
+        config actions
+            edit 1
+                set action "DIAG_FNSYSCTL_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 2
+                set action "DIAG_HARDWARE_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 3
+                set action "DIAG_IPS_MEM_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 4
+                set action "DIAG_IPS_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 5
+                set action "DIAG_IPSM_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 6
+                set action "DIAG_NPU_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 7
+                set action "DIAG_SYS_PROFILE_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 8
+                set action "to_email@gmail.com"
+                set delay 5
+                set required enable
+            next
+        end
+    next
+    edit "TROUBLESHOOTING_SCRIPT_2_QUARTER"
+        set trigger "SCHEDULE_QUARTER_HOUR"
+        config actions
+            edit 1
+                set action "DIAG_SYS_SESS_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 2
+                set action "DIAG_SYS_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 3
+                set action "DIAG_WAD_1_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 4
+                set action "DIAG_WAD_2_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 5
+                set action "DIAG_WAD_3_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 6
+                set action "DIAG_WAD_4_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 7
+                set action "DIAG_WAD_MEM_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 8
+                set action "GET_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 9
+                set action "to_email@gmail.com"
+                set delay 5
+                set required enable
+            next
+        end
+    next
+    edit "TROUBLESHOOTING_SCRIPT_2_THIRD"
+        set trigger "SCHEDULE_THIRD_HOUR"
+        config actions
+            edit 1
+                set action "DIAG_SYS_SESS_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 2
+                set action "DIAG_SYS_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 3
+                set action "DIAG_WAD_1_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 4
+                set action "DIAG_WAD_2_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 5
+                set action "DIAG_WAD_3_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 6
+                set action "DIAG_WAD_4_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 7
+                set action "DIAG_WAD_MEM_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 8
+                set action "GET_TSHOOT"
+                set delay 5
+                set required enable
+            next
+            edit 9
+                set action "to_email@gmail.com"
+                set delay 5
+                set required enable
+            next
+        end
+    next
+end
